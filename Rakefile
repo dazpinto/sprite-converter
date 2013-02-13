@@ -1,4 +1,4 @@
-require 'lib/base'
+require './lib/base'
 
 task :default => [:spritify]
 
@@ -59,6 +59,7 @@ task :has_imagemagick do
 
   if $?.exitstatus == 1
     puts "Imagemagick is required"
+    puts "Install with apt-get install imagemagick"
     puts "To install without admin rights follow steps 1-9 in this guide http://scottiestech.info/2010/05/18/installing-imagemagick-from-source-on-ubuntu/"
     exit 1
   end
